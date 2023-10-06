@@ -10,7 +10,7 @@ const NavBar = () => {
             isPending
               ? 'pending'
               : isActive
-              ? 'text-[#FF444A] underline font-bold'
+              ? 'text-[#2D5FDA] underline font-bold'
               : ''
           }
         >
@@ -25,7 +25,7 @@ const NavBar = () => {
             isPending
               ? 'pending'
               : isActive
-              ? 'text-[#FF444A] underline font-bold'
+              ? 'text-[#2D5FDA] underline font-bold'
               : ''
           }
         >
@@ -40,7 +40,7 @@ const NavBar = () => {
             isPending
               ? 'pending'
               : isActive
-              ? 'text-[#FF444A] underline font-bold'
+              ? 'text-[#2D5FDA] underline font-bold'
               : ''
           }
         >
@@ -55,7 +55,7 @@ const NavBar = () => {
             isPending
               ? 'pending'
               : isActive
-              ? 'text-[#FF444A] underline font-bold'
+              ? 'text-[#2D5FDA] underline font-bold'
               : ''
           }
         >
