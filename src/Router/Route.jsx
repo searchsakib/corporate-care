@@ -2,9 +2,10 @@ import { createBrowserRouter } from 'react-router-dom';
 import MainLayout from '../layout/MainLayout';
 import Home from '../pages/Home/Home';
 import About from '../components/About/About';
-import Bookings from '../components/Bookings/Bookings';
+import Contact from '../components/Contact/Contact';
 import ErrorPage from '../pages/ErrorPage/ErrorPage';
 import Login from '../components/Login/Login';
+import Faqs from '../components/Faqs/Faqs';
 
 const myRoute = createBrowserRouter([
   {
@@ -21,12 +22,16 @@ const myRoute = createBrowserRouter([
         element: <About></About>,
       },
       {
-        path: '/bookings',
-        element: <Bookings></Bookings>,
+        path: '/contact',
+        element: <Contact></Contact>,
       },
       {
         path: '/login',
         element: <Login></Login>,
+      },
+      {
+        path: '/faqs',
+        element: <Faqs></Faqs>,
       },
     ],
   },
