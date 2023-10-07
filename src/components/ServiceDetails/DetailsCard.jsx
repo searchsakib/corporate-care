@@ -20,8 +20,9 @@ const DetailsCard = ({ eventDetails }) => {
           bottom-1 left-3 right-0 flex items-center justify-start h-16 "
           >
             <button className=" text-blue-800 text-xs md:hidden lg:hidden px-3 py-2 rounded shadow-md w-fit bg-white font-medium">
-              Donate {price}
+              Booking {price}
             </button>
+
             <div className="p-10 mb-32 hidden md:block">
               <div className="flex justify-between items-center">
                 <h5 className="mb-2 block text-3xl text-white pt-9 pb-2 font-bold leading-snug tracking-normal antialiased">
@@ -36,6 +37,14 @@ const DetailsCard = ({ eventDetails }) => {
               </p>
             </div>
           </div>
+        </div>
+        <div className="md:hidden lg:hidden">
+          <h5 className="block text-[25px] text-[#0B0B0B] pt-8 pb-1 font-bold leading-snug tracking-normal antialiased">
+            {title}
+          </h5>
+          <p className="block text-base font-normal leading-[30px] antialiased text-[#0B0B0BB2]">
+            {description}
+          </p>
         </div>
       </div>
     </div>
