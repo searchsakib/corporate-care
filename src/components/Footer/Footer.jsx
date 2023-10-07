@@ -18,7 +18,7 @@ const Footer = () => {
         </NavLink>
       </li>
 
-      <li className="md:pr-12 lg:pr-12 pb-2 md:pb-0 lg:pb-0">
+      <li className=" pb-2 md:pb-0 lg:pb-0">
         <NavLink
           to="/about"
           className={({ isActive, isPending }) =>
@@ -36,16 +36,15 @@ const Footer = () => {
   );
 
   return (
-    <footer className="flex flex-col md:flex-row lg:flex-row  md:px-10 lg:px-10 xl:px-0 items-center justify-between  max-w-[1320px] mx-auto ">
+    <footer className="flex flex-col md:px-10 lg:px-10 xl:px-0 items-center justify-between  max-w-[1320px] mx-auto ">
       <div>
         <Link>
-          {/* <img src="/images/logo.png" alt="" /> */}
           <h2 className="font-bold text-blue-800 text-2xl font-serif">
             Corporate <span className="text-white bg-blue-800">Care</span>{' '}
           </h2>
         </Link>
       </div>
-      <div className="text-center mt-9 md:mt-0 lg:mt-0 ">
+      <div className="text-center mt-8 mb-8 ">
         <ul className=" md:flex lg:flex text-lg">{links}</ul>
       </div>
       <div>
