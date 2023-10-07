@@ -20,11 +20,11 @@ const ServiceCard = ({ service }) => {
         <h2 className="card-title mx-auto font-bold"> {title} </h2>
         <p className="mt-2"> {short_desc} </p>
         <p className="font-semibold text-lg">Booking Price: {price} </p>
-        <Link to={`/service-details/${id}`}>
-          <div className="card-actions justify-center mt-2">
+        <div className="card-actions justify-center mt-2">
+          <Link to={`/service-details/${id}`}>
             <button className="btn bg-blue-700 text-blue-50">Details</button>
-          </div>
-        </Link>
+          </Link>
+        </div>
       </div>
     </div>
   );
