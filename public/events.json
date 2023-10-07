@@ -4,59 +4,59 @@
     "image": "https://i.ibb.co/MnPNSVq/confer.jpg",
     "image_det": "https://i.ibb.co/XSyWmJR/confer2.jpg",
     "title": "CONFERENCE",
-    "short_desc": "Organize and host successful conferences with us.",
+    "short_desc": "Organize and host successful conferences with us.We craft immersive experiences that inspire and connect.",
     "description": "Elevate your conferences with our expert planning and hosting services. Our team specializes in creating memorable and impactful conferences that inspire and connect. From selecting the perfect venue to curating engaging content, we ensure every detail is meticulously managed. Let us make your next conference an unforgettable experience for your attendees.",
     "category": "corporate_events",
-    "price": "$190"
+    "price": "$1999"
   },
   {
     "id": 2,
     "image": "https://i.ibb.co/MNpq7h2/trade.jpg",
     "image_det": "https://i.ibb.co/g96KnYg/trade2.jpg",
     "title": "TRADE SHOW",
-    "short_desc": "Create memorable trade shows that leave an impact.",
+    "short_desc": "Create memorable trade shows that leave an impact. Make a statement with your brand at trade shows.",
     "description": "Make a lasting impact with our trade show planning and management services. We're your trusted partner in crafting trade show experiences that drive results. Our team designs and manages your trade show booth, creates engaging presentations, and attracts the right audience to showcase your brand and products effectively. Let us help you create a trade show that stands out and captivates your audience.",
     "category": "corporate_events",
-    "price": "$290"
+    "price": "$2999"
   },
   {
     "id": 3,
     "image": "https://i.ibb.co/fqFZhLM/prod.jpg",
     "image_det": "https://i.ibb.co/hmHDP3m/prod2.jpg",
     "title": "PRODUCT LAUNCH",
-    "short_desc": "Launch your products in style and captivate your audience.",
+    "short_desc": "Launch your products in style and captivate your audience. Our product launch events are creating waves in the market.",
     "description": "Make a splash in the market with our product launch services. We specialize in creating buzzworthy product launches that generate excitement and interest. From planning launch events to crafting compelling marketing strategies, we ensure your products get the attention they deserve. Our creative approach and attention to detail will help you captivate your audience and leave a lasting impression.",
     "category": "corporate_events",
-    "price": "$390"
+    "price": "$3999"
   },
   {
     "id": 4,
     "image": "https://i.ibb.co/tzwBSq4/exb.jpg",
     "image_det": "https://i.ibb.co/JdnVRTV/exb2.jpg",
     "title": "EXHIBITIONS",
-    "short_desc": "Curate inspiring exhibitions that showcase creativity.",
+    "short_desc": "Curate inspiring exhibitions that showcase creativity. Exhibit your best products and leave the rest to us.",
     "description": "Immerse your audience in captivating exhibitions with our expert curation and design services. We'll help you curate the perfect exhibition, design stunning displays, and create interactive elements that draw visitors in. Whether it's an art exhibition or a product showcase, our goal is to make sure your exhibition leaves a lasting impression.",
     "category": "corporate_events",
-    "price": "$490"
+    "price": "$4999"
   },
   {
     "id": 5,
     "image": "https://i.ibb.co/Wt0DtX7/bran.jpg",
     "image_det": "https://i.ibb.co/JjMLKPZ/bran2.jpg",
     "title": "BRAND ACTIVATION",
-    "short_desc": "Elevate your brand with innovative activation campaigns.",
+    "short_desc": "Elevate your brand with innovative activation campaigns.Manage your events with our for long term impact.",
     "description": "Activate your brand's full potential with our innovative activation campaigns. We create memorable experiences that bring your brand to life, from experiential marketing campaigns to guerrilla marketing tactics. Let us help you stand out in a crowded marketplace and make a lasting impact with your brand.",
     "category": "corporate_events",
-    "price": "$490"
+    "price": "$4999"
   },
   {
     "id": 6,
     "image": "https://i.ibb.co/2sMMc2F/ann.jpg",
     "image_det": "https://i.ibb.co/dc3XDkL/ann2.jpg",
     "title": "ANNUAL MEETING",
-    "short_desc": "Plan and host successful annual meetings with us.",
+    "short_desc": "Plan and host successful annual meetings with us. We make your every interaction better with our event management expertise.",
     "description": "Let us take care of planning and hosting your annual meetings. Our services are designed to make your gatherings memorable and impactful. We handle everything from venue selection to agenda planning and logistics management. Whether it's a corporate annual meeting or a nonprofit conference, we'll ensure your event runs smoothly and achieves its goals.",
     "category": "corporate_events",
-    "price": "$390"
+    "price": "$3999"
   }
 ]
