@@ -6,7 +6,7 @@ import Contact from '../components/Contact/Contact';
 import ErrorPage from '../pages/ErrorPage/ErrorPage';
 import Login from '../components/Login/Login';
 import Faqs from '../components/Faqs/Faqs';
-import DetailsCard from '../components/ServiceDetails/DetailsCard';
+import ServiceDetails from '../components/ServiceDetails/ServiceDetails';
 
 const myRoute = createBrowserRouter([
   {
@@ -36,7 +36,8 @@ const myRoute = createBrowserRouter([
       },
       {
         path: '/service-details/:id',
-        element: <DetailsCard></DetailsCard>,
+        element: <ServiceDetails></ServiceDetails>,
+        loader: () => fetch('/events.json'),
       },
     ],
   },

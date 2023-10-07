@@ -8,7 +8,7 @@ const Services = () => {
       .then((res) => res.json())
       .then((data) => setMyService(data));
   }, []);
-  console.log(myService);
+  // console.log(myService);
 
   return (
     <div className="max-w-[1320px] mx-auto">
