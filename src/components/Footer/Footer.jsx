@@ -10,8 +10,8 @@ const Footer = () => {
             isPending
               ? 'pending'
               : isActive
-              ? 'text-[#2D5FDA] underline font-bold'
-              : ''
+              ? 'text-white outline font-bold p-2'
+              : 'text-blue-50'
           }
         >
           Home
@@ -25,8 +25,8 @@ const Footer = () => {
             isPending
               ? 'pending'
               : isActive
-              ? 'text-[#2D5FDA] underline font-bold'
-              : ''
+              ? 'text-white outline p-2  font-bold'
+              : 'text-blue-50'
           }
         >
           About Us
@@ -36,11 +36,11 @@ const Footer = () => {
   );
 
   return (
-    <footer className="flex flex-col md:px-10 lg:px-10 xl:px-0 items-center justify-between  max-w-[1320px] mx-auto ">
+    <footer className="flex flex-col md:px-10 lg:px-10 xl:px-0 items-center justify-between  max-w-[1320px] mx-auto">
       <div>
         <Link>
-          <h2 className="font-bold text-blue-800 text-2xl font-serif">
-            Corporate <span className="text-white bg-blue-800">Care</span>{' '}
+          <h2 className="font-bold text-blue-50 text-2xl font-serif">
+            Corporate <span className="text-blue-800 bg-blue-50">Care</span>{' '}
           </h2>
         </Link>
       </div>
@@ -49,7 +49,7 @@ const Footer = () => {
       </div>
       <div>
         <p>
-          <small>© Corporate Care 2023</small>
+          <small className="text-blue-50">© Corporate Care 2023</small>
         </p>
       </div>
     </footer>
