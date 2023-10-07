@@ -6,6 +6,7 @@ import Contact from '../components/Contact/Contact';
 import ErrorPage from '../pages/ErrorPage/ErrorPage';
 import Login from '../components/Login/Login';
 import Faqs from '../components/Faqs/Faqs';
+import DetailsCard from '../components/ServiceDetails/DetailsCard';
 
 const myRoute = createBrowserRouter([
   {
@@ -32,6 +33,10 @@ const myRoute = createBrowserRouter([
       {
         path: '/faqs',
         element: <Faqs></Faqs>,
+      },
+      {
+        path: '/service-details/:id',
+        element: <DetailsCard></DetailsCard>,
       },
     ],
   },
