@@ -13,11 +13,15 @@ const DetailsCard = ({ eventDetails }) => {
           />
 
           <div className="absolute bottom-0 left-0 right-0 bg-blue-700 opacity-90 h-[70px] md:h-[140px] lg:h-[230px] hidden md:block"></div>
+          <div className="absolute bottom-0 left-0 right-0 bg-blue-700 opacity-90 h-[70px] md:hidden lg:hidden"></div>
 
           <div
             className="absolute lg:bottom-8 lg:left-0 md:bottom-4 md:left-0 
           bottom-1 left-3 right-0 flex items-center justify-start h-16 "
           >
+            <button className=" text-blue-800 text-xs md:hidden lg:hidden px-3 py-2 rounded shadow-md w-fit bg-white font-medium">
+              Donate {price}
+            </button>
             <div className="p-10 mb-32 hidden md:block">
               <div className="flex justify-between items-center">
                 <h5 className="mb-2 block text-3xl text-white pt-9 pb-2 font-bold leading-snug tracking-normal antialiased">
