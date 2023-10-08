@@ -4,10 +4,10 @@ import { FcGoogle } from 'react-icons/fc';
 const Login = () => {
   const handleLogin = (e) => {
     e.preventDefault();
-    console.log(e.currentTarget);
+    // console.log(e.currentTarget);
     const form = new FormData(e.currentTarget);
-    console.log(form.get('email'));
-    console.log(form.get('password'));
+    // console.log(form.get('email'));
+    // console.log(form.get('password'));
   };
 
   return (
