@@ -14,7 +14,7 @@ const NavBar = () => {
 
   const links = (
     <>
-      <li className="md:pr-12 lg:pr-12 pb-2 md:pb-0 lg:pb-0">
+      <li className="md:pr-12 lg:pr-12 pb-4 md:pb-0 lg:pb-0">
         <NavLink
           to="/"
           className={({ isActive, isPending }) =>
@@ -29,7 +29,7 @@ const NavBar = () => {
         </NavLink>
       </li>
 
-      <li className="md:pr-12 lg:pr-12 pb-2 md:pb-0 lg:pb-0">
+      <li className="md:pr-12 lg:pr-12 pb-4 md:pb-0 lg:pb-0">
         <NavLink
           to="/about"
           className={({ isActive, isPending }) =>
@@ -44,7 +44,7 @@ const NavBar = () => {
         </NavLink>
       </li>
 
-      <li className="md:pr-12 lg:pr-12 pb-2 md:pb-0 lg:pb-0">
+      <li className="md:pr-12 lg:pr-12 pb-4 md:pb-0 lg:pb-0">
         <NavLink
           to="/contact"
           className={({ isActive, isPending }) =>
@@ -58,7 +58,7 @@ const NavBar = () => {
           Contact
         </NavLink>
       </li>
-      <li className="md:pr-12 lg:pr-12 pb-2 md:pb-0 lg:pb-0">
+      <li className="md:pr-12 lg:pr-12 pb-4 md:pb-0 lg:pb-0">
         <NavLink
           to="/coupon"
           className={({ isActive, isPending }) =>
@@ -72,7 +72,7 @@ const NavBar = () => {
           Coupon
         </NavLink>
       </li>
-      <li>
+      <li className="pb-8 md:pb-0 lg:pb-0">
         <NavLink
           to="/login"
           className={({ isActive, isPending }) =>
@@ -101,13 +101,13 @@ const NavBar = () => {
       <div className="text-center mt-9 md:mt-0 lg:mt-0 ">
         <ul className=" md:flex lg:flex text-lg">{links}</ul>
       </div>
-      <div className="flex">
+      <div className="flex flex-col lg:flex-row items-center justify-center gap-3">
         <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
           <div className="w-10 rounded-full">
             {photo ? <img src={photo} /> : <img src={userPic} />}
           </div>
-          {name && <p> {name} </p>}
         </label>
+        {name && <p> {name} </p>}
         {user ? (
           <button onClick={handleSignOut} className="btn">
             Sign Out
