@@ -5,6 +5,7 @@ const Login = () => {
   return (
     <div className="pt-[60px] pb-[76px] bg-gray-100">
       <div className="mx-auto w-5/12 min-w-fit ">
+        <h2 className="text-3xl font-medium my-5 text-center">Login Here</h2>
         <form className="card-body">
           <div className="form-control">
             <label className="label">
