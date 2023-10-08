@@ -12,9 +12,9 @@ const Services = () => {
 
   return (
     <div className="max-w-[1320px] mx-auto">
-      <div className="text-center mb-16 p-2 md:p-0 lg:p-0">
+      <div className="text-center mb-12 p-2 md:p-0 lg:p-0">
         <h2 className="text-5xl font-semibold m-5">Our Services</h2>
-        <p>
+        <p className="md:px-32 lg:px-32">
           At Corporate Care Events, we've got you covered. We collaborate
           closely with local vendors to craft enjoyable, distinctive, and
           innovative events customized precisely to suit your organization's

@@ -48,7 +48,7 @@ const Faqs = () => {
 
   return (
     <div className="max-w-[1320px] mx-auto mt-24 px-6 md:px-0 lg:px-0">
-      <div className="text-center mb-16 p-2 md:p-0 lg:p-0">
+      <div className="text-center mb-12 p-2 md:p-0 lg:p-0">
         <h2 className="text-5xl font-semibold m-5">
           Frequently Asked Questions
         </h2>
