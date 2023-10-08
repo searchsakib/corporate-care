@@ -29,7 +29,7 @@ const Review = () => {
           <h2 className="font-semibold text-center text-xl">Chris Wokes</h2>
           <p className="text-center text-lg">Founder of Delper</p>
         </div>
-        <div data-aos="fade-up">
+        <div data-aos="zoom-in">
           <img className="mx-auto" src="/images/client2.png" alt="" />
           <p className="italic py-6 text-2xl leading-10 text-center">
             "I can't thank Corporate Care enough for their outstanding event
