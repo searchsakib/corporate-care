@@ -48,9 +48,11 @@ const Login = () => {
         <div>
           <p className="text-center font-normal text-xl">Or</p>
           <p className="text-center font-normal text-xl">Login With</p>
-          <Link>
-            <FcGoogle className="w-fit mx-auto my-6" size={45}></FcGoogle>
-          </Link>
+          <div className=" rounded-full h-fit w-fit bg-white mx-auto my-6">
+            <Link>
+              <FcGoogle className="p-1" size={55}></FcGoogle>
+            </Link>
+          </div>
         </div>
         <p className="font-medium text-center">
           Do not have an account{' '}
