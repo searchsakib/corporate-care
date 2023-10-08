@@ -11,11 +11,38 @@ const Register = () => {
           <form className="card-body">
             <div className="form-control">
               <label className="label">
+                <span className="label-text font-medium text-base">Name</span>
+              </label>
+              <input
+                type="text"
+                placeholder="name"
+                name="name"
+                className="input input-bordered"
+                required
+              />
+            </div>
+            <div className="form-control">
+              <label className="label">
+                <span className="label-text font-medium text-base">
+                  Photo URL
+                </span>
+              </label>
+              <input
+                type="text"
+                placeholder="Photo URL"
+                name="url"
+                className="input input-bordered"
+                required
+              />
+            </div>
+            <div className="form-control">
+              <label className="label">
                 <span className="label-text font-medium text-base">Email</span>
               </label>
               <input
                 type="email"
                 placeholder="email"
+                name="email"
                 className="input input-bordered"
                 required
               />
@@ -27,6 +54,7 @@ const Register = () => {
               <input
                 type="password"
                 placeholder="password"
+                name="password"
                 className="input input-bordered"
                 required
               />

@@ -2,11 +2,19 @@ import { Link } from 'react-router-dom';
 import { FcGoogle } from 'react-icons/fc';
 
 const Login = () => {
+  const handleLogin = (e) => {
+    e.preventDefault();
+    console.log(e.currentTarget);
+    const form = new FormData(e.currentTarget);
+    console.log(form.get('email'));
+    console.log(form.get('password'));
+  };
+
   return (
     <div className="pt-[60px] pb-[76px] bg-gray-100">
       <div className="mx-auto w-5/12 min-w-fit ">
         <h2 className="text-3xl font-medium my-5 text-center">Login Here</h2>
-        <form className="card-body">
+        <form onSubmit={handleLogin} className="card-body">
           <div className="form-control">
             <label className="label">
               <span className="label-text font-medium text-base">Email</span>
@@ -14,6 +22,7 @@ const Login = () => {
             <input
               type="email"
               placeholder="email"
+              name="email"
               className="input input-bordered"
               required
             />
@@ -25,6 +34,7 @@ const Login = () => {
             <input
               type="password"
               placeholder="password"
+              name="password"
               className="input input-bordered"
               required
             />
