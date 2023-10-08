@@ -1,5 +1,5 @@
 const DetailsCard = ({ eventDetails }) => {
-  console.log(eventDetails);
+  // console.log(eventDetails);
   const { image_det, title, description, price } = eventDetails || {};
   return (
     <div className="max-w-[1320px] mx-auto">

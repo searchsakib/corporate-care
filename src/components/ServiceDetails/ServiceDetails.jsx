@@ -6,15 +6,15 @@ const ServiceDetails = () => {
   const [eventDetails, setEventDetails] = useState([]);
 
   const { id } = useParams();
-  console.log(id);
+  // console.log(id);
 
   const eventFetched = useLoaderData();
-  console.log(eventFetched);
+  // console.log(eventFetched);
   useEffect(() => {
     const findEvent = eventFetched?.find((theEvent) => theEvent.id == id);
     setEventDetails(findEvent);
   }, [id, eventFetched]);
-  console.log(eventDetails);
+  // console.log(eventDetails);
 
   return (
     <div>
