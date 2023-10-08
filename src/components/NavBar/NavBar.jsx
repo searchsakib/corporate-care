@@ -5,6 +5,8 @@ import { AuthContext } from '../providers/AuthProvider';
 
 const NavBar = () => {
   const { user, logOut } = useContext(AuthContext);
+  const name = user && user.displayName;
+  const photo = user && user.photoURL;
 
   const handleSignOut = () => {
     logOut().then().catch();
@@ -102,8 +104,9 @@ const NavBar = () => {
       <div className="flex">
         <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
           <div className="w-10 rounded-full">
-            <img src={userPic} />
+            {photo ? <img src={photo} /> : <img src={userPic} />}
           </div>
+          {name && <p> {name} </p>}
         </label>
         {user ? (
           <button onClick={handleSignOut} className="btn">
