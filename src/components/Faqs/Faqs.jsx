@@ -56,7 +56,7 @@ const Faqs = () => {
       </div>
 
       {/* faq here */}
-      <div data-aos="flip-left">
+      <div data-aos="zoom-out">
         <section className="bg-gray-100 py-12 rounded-lg">
           <div className="max-w-6xl mx-auto px-5">
             {faqItems.map((item, index) => (

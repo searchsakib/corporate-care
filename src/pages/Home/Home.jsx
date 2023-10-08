@@ -5,7 +5,7 @@ import Services from '../../components/Services/Services';
 
 const Home = () => {
   return (
-    <div className="pb-[100px]">
+    <div className="pb-[100px] overflow-x-hidden">
       <Banner></Banner>
       <div>
         <Services></Services>
