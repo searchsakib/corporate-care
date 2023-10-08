@@ -35,21 +35,6 @@ const NavBar = () => {
 
       <li className="md:pr-12 lg:pr-12 pb-2 md:pb-0 lg:pb-0">
         <NavLink
-          to="/login"
-          className={({ isActive, isPending }) =>
-            isPending
-              ? 'pending'
-              : isActive
-              ? 'text-[#2D5FDA] underline font-bold'
-              : ''
-          }
-        >
-          Login
-        </NavLink>
-      </li>
-
-      <li className="md:pr-12 lg:pr-12 pb-2 md:pb-0 lg:pb-0">
-        <NavLink
           to="/contact"
           className={({ isActive, isPending }) =>
             isPending
@@ -62,9 +47,9 @@ const NavBar = () => {
           Contact
         </NavLink>
       </li>
-      <li>
+      <li className="md:pr-12 lg:pr-12 pb-2 md:pb-0 lg:pb-0">
         <NavLink
-          to="/member"
+          to="/coupon"
           className={({ isActive, isPending }) =>
             isPending
               ? 'pending'
@@ -73,7 +58,21 @@ const NavBar = () => {
               : ''
           }
         >
-          Member
+          Coupon
+        </NavLink>
+      </li>
+      <li>
+        <NavLink
+          to="/login"
+          className={({ isActive, isPending }) =>
+            isPending
+              ? 'pending'
+              : isActive
+              ? 'text-[#2D5FDA] underline font-bold'
+              : ''
+          }
+        >
+          Login
         </NavLink>
       </li>
     </>

@@ -6,7 +6,7 @@ import Contact from '../components/Contact/Contact';
 import ErrorPage from '../pages/ErrorPage/ErrorPage';
 import Login from '../components/Login/Login';
 import ServiceDetails from '../components/ServiceDetails/ServiceDetails';
-import Member from '../components/Member/Member';
+import Coupon from '../components/Coupon/Coupon';
 
 const myRoute = createBrowserRouter([
   {
@@ -31,8 +31,8 @@ const myRoute = createBrowserRouter([
         element: <Login></Login>,
       },
       {
-        path: '/member',
-        element: <Member></Member>,
+        path: '/coupon',
+        element: <Coupon></Coupon>,
       },
       {
         path: '/service-details/:id',
