@@ -44,34 +44,40 @@ const NavBar = () => {
         </NavLink>
       </li>
 
-      <li className="md:pr-12 lg:pr-12 pb-4 md:pb-0 lg:pb-0">
-        <NavLink
-          to="/contact"
-          className={({ isActive, isPending }) =>
-            isPending
-              ? 'pending'
-              : isActive
-              ? 'text-[#2D5FDA] underline font-bold'
-              : ''
-          }
-        >
-          Contact
-        </NavLink>
-      </li>
-      <li className="md:pr-12 lg:pr-12 pb-4 md:pb-0 lg:pb-0">
-        <NavLink
-          to="/coupon"
-          className={({ isActive, isPending }) =>
-            isPending
-              ? 'pending'
-              : isActive
-              ? 'text-[#2D5FDA] underline font-bold'
-              : ''
-          }
-        >
-          Coupon
-        </NavLink>
-      </li>
+      {user && (
+        <li className="md:pr-12 lg:pr-12 pb-4 md:pb-0 lg:pb-0">
+          <NavLink
+            to="/contact"
+            className={({ isActive, isPending }) =>
+              isPending
+                ? 'pending'
+                : isActive
+                ? 'text-[#2D5FDA] underline font-bold'
+                : ''
+            }
+          >
+            Contact
+          </NavLink>
+        </li>
+      )}
+
+      {user && (
+        <li className="md:pr-12 lg:pr-12 pb-4 md:pb-0 lg:pb-0">
+          <NavLink
+            to="/coupon"
+            className={({ isActive, isPending }) =>
+              isPending
+                ? 'pending'
+                : isActive
+                ? 'text-[#2D5FDA] underline font-bold'
+                : ''
+            }
+          >
+            Coupon
+          </NavLink>
+        </li>
+      )}
+
       <li className="pb-8 md:pb-0 lg:pb-0">
         <NavLink
           to="/login"
@@ -110,7 +116,7 @@ const NavBar = () => {
         {name && <p> {name} </p>}
         {user ? (
           <button onClick={handleSignOut} className="btn">
-            Sign Out
+            Log Out
           </button>
         ) : (
           <Link to="/login">

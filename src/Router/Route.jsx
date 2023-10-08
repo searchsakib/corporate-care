@@ -26,7 +26,11 @@ const myRoute = createBrowserRouter([
       },
       {
         path: '/contact',
-        element: <Contact></Contact>,
+        element: (
+          <PrivateRoute>
+            <Contact></Contact>
+          </PrivateRoute>
+        ),
       },
       {
         path: '/login',
@@ -34,7 +38,11 @@ const myRoute = createBrowserRouter([
       },
       {
         path: '/coupon',
-        element: <Coupon></Coupon>,
+        element: (
+          <PrivateRoute>
+            <Coupon></Coupon>
+          </PrivateRoute>
+        ),
       },
       {
         path: '/service-details/:id',
