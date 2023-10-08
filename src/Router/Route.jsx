@@ -8,6 +8,7 @@ import Login from '../components/Login/Login';
 import ServiceDetails from '../components/ServiceDetails/ServiceDetails';
 import Coupon from '../components/Coupon/Coupon';
 import Register from '../components/Register/Register';
+import PrivateRoute from './PrivateRoute';
 
 const myRoute = createBrowserRouter([
   {
@@ -37,7 +38,11 @@ const myRoute = createBrowserRouter([
       },
       {
         path: '/service-details/:id',
-        element: <ServiceDetails></ServiceDetails>,
+        element: (
+          <PrivateRoute>
+            <ServiceDetails></ServiceDetails>
+          </PrivateRoute>
+        ),
         loader: () => fetch('/events.json'),
       },
       {
