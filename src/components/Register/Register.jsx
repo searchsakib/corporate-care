@@ -1,10 +1,11 @@
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../providers/AuthProvider';
 import { useContext } from 'react';
 import { updateProfile } from 'firebase/auth';
 
 const Register = () => {
   const { createUser } = useContext(AuthContext);
+  const navigate = useNavigate();
 
   const handleRegister = (e) => {
     e.preventDefault();
@@ -20,11 +21,15 @@ const Register = () => {
     createUser(email, password, name, photo)
       .then((result) => {
         console.log(result.user);
+        navigate('/');
         updateProfile(result.user, {
           displayName: name,
           photoURL: photo,
         })
-          .then(() => console.log('profile updated'))
+          .then((res) => {
+            console.log('profile updated', res);
+          })
+
           .catch((err) => {
             console.log(err);
           });
