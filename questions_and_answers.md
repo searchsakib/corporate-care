@@ -45,7 +45,7 @@ sum(1, '2');
 
 #### Answer: C
 
-<i>In this function, a = 1 is a Number, but b = '2' is String. So when function calls a + b, it converts a = 1 in a string, then adds both string value, which is a and b. So by string concatenation, the answer is '12'</i>
+<i>In this function, a = 1 is a Number, but b = '2' is a String. So when function calls a + b, it converts a = 1 in a string, then adds both string value, which is a and b. So by string concatenation, the answer is '12'</i>
 
 </p>
 </details>
@@ -71,7 +71,7 @@ console.log(food);
 
 #### Answer: A
 
-<i> By info.favoriteFood = '🍝', we changing the info object favoriteFood value from food[0] which is '🍕' to '🍝'. But it has no effect on the food array. That's why the array is unchanged and returning the original array ['🍕', '🍫', '🥑', '🍔'] </i>
+<i> By info.favoriteFood = '🍝', we are changing the info object favoriteFood value from food[0] which is '🍕' to '🍝'. But it has no effect on the food array. That's why the array is unchanged and returning the original array ['🍕', '🍫', '🥑', '🍔'] </i>
 
 </p>
 </details>
@@ -96,7 +96,7 @@ console.log(sayHi());
 
 #### Answer: B
 
-<i> Here in sayHi function, we passed a parameter called name, but when we are logging it, we didn't give the parameter value and left it empty, Theat why the answer is Hi there, undefined . Because the name is not defined</i>
+<i> Here in sayHi function, we passed a parameter called name, but when we are logging it, we didn't give the parameter any value and left it empty, Theat why the answer is Hi there, undefined . Because the name is not defined.</i>
 
 </p>
 </details>
