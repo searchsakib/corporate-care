@@ -65,7 +65,9 @@ const Register = () => {
             Register Here
           </h2>
           {regError && (
-            <p className="text-red-600 text-center text-xl"> {regError} </p>
+            <div className="text-red-600 text-center text-xl max-w-[540px] mx-auto">
+              <p> {regError} </p>
+            </div>
           )}
           <form onSubmit={handleRegister} className="card-body">
             <div className="form-control">

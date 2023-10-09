@@ -33,6 +33,8 @@ const Login = () => {
     const email = form.get('email');
     const password = form.get('password');
 
+    setLogError('');
+
     signIn(email, password)
       .then((res) => {
         console.log(res.user);
@@ -50,7 +52,9 @@ const Login = () => {
       <div className="mx-auto w-5/12 min-w-fit ">
         <h2 className="text-3xl font-medium my-5 text-center">Login Here</h2>
         {logError && (
-          <p className="text-red-600 text-center text-xl"> {logError} </p>
+          <div className="text-red-600 text-center text-xl max-w-[540px] mx-auto">
+            <p> {logError} </p>
+          </div>
         )}
         <form onSubmit={handleLogin} className="card-body">
           <div className="form-control">
