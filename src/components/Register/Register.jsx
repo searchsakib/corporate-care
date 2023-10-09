@@ -41,8 +41,8 @@ const Register = () => {
         console.log(result.user);
         swal({
           title: 'Registration Successfull!',
-          text: 'You Registered in Corporate Care.',
-          timer: 2000,
+          text: 'You Registered Successfully.',
+          timer: 1200,
           buttons: false,
         });
         navigate('/');

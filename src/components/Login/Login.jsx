@@ -4,6 +4,7 @@ import { useContext, useState } from 'react';
 import { AuthContext } from '../providers/AuthProvider';
 import { GoogleAuthProvider, getAuth, signInWithPopup } from 'firebase/auth';
 import app from '../Firebase/firebase.config';
+import swal from 'sweetalert';
 
 const Login = () => {
   const { signIn } = useContext(AuthContext);
@@ -20,6 +21,12 @@ const Login = () => {
       .then((result) => {
         const user = result.user;
         console.log(user);
+        swal({
+          title: 'Login Successfull!',
+          text: 'You Logged in Successfully.',
+          timer: 1200,
+          buttons: false,
+        });
         navigate(location?.state ? location.state : '/');
       })
       .catch((err) => {
@@ -38,6 +45,13 @@ const Login = () => {
     signIn(email, password)
       .then((res) => {
         console.log(res.user);
+
+        swal({
+          title: 'Login Successfull!',
+          text: 'You Logged in Successfully.',
+          timer: 1200,
+          buttons: false,
+        });
 
         navigate(location?.state ? location.state : '/');
       })
