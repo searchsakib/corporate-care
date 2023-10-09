@@ -2,11 +2,28 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { FcGoogle } from 'react-icons/fc';
 import { useContext } from 'react';
 import { AuthContext } from '../providers/AuthProvider';
+import { GoogleAuthProvider, getAuth, signInWithPopup } from 'firebase/auth';
+import app from '../Firebase/firebase.config';
 
 const Login = () => {
   const { signIn } = useContext(AuthContext);
+  const auth = getAuth(app);
+  const provider = new GoogleAuthProvider();
+
   const location = useLocation();
   const navigate = useNavigate();
+
+  const handleGoogleSignIn = () => {
+    signInWithPopup(auth, provider)
+      .then((result) => {
+        const user = result.user;
+        console.log(user);
+        navigate(location?.state ? location.state : '/');
+      })
+      .catch((err) => {
+        console.log('error', err.message);
+      });
+  };
 
   const handleLogin = (e) => {
     e.preventDefault();
@@ -63,7 +80,10 @@ const Login = () => {
         <div>
           <p className="text-center font-normal text-xl">Or</p>
           <p className="text-center font-normal text-xl">Login With</p>
-          <div className=" rounded-full h-fit w-fit bg-white mx-auto my-6">
+          <div
+            onClick={handleGoogleSignIn}
+            className=" rounded-full h-fit w-fit bg-white mx-auto my-6"
+          >
             <Link>
               <FcGoogle className="p-1" size={55}></FcGoogle>
             </Link>
