@@ -1,14 +1,29 @@
 import { Link, NavLink } from 'react-router-dom';
 import userPic from '/images/user.png';
-import { useContext } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import { AuthContext } from '../providers/AuthProvider';
 
 const NavBar = () => {
   const { user, logOut } = useContext(AuthContext);
-  const name = user && user.displayName;
-  const photo = user && user.photoURL;
+
+  const [name, setName] = useState(null);
+  const [photo, setPhoto] = useState(null);
+
+  useEffect(() => {
+    const delay = setTimeout(() => {
+      if (user) {
+        setName(user.displayName);
+        setPhoto(user.photoURL);
+      }
+    }, 1000);
+
+    return () => clearTimeout(delay);
+  }, [user]);
 
   const handleSignOut = () => {
+    setName(null);
+    setPhoto(null);
+
     logOut().then().catch();
   };
 
