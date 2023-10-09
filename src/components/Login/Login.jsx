@@ -1,6 +1,6 @@
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { FcGoogle } from 'react-icons/fc';
-import { useContext } from 'react';
+import { useContext, useState } from 'react';
 import { AuthContext } from '../providers/AuthProvider';
 import { GoogleAuthProvider, getAuth, signInWithPopup } from 'firebase/auth';
 import app from '../Firebase/firebase.config';
@@ -12,6 +12,8 @@ const Login = () => {
 
   const location = useLocation();
   const navigate = useNavigate();
+
+  const [logError, setLogError] = useState('');
 
   const handleGoogleSignIn = () => {
     signInWithPopup(auth, provider)
@@ -39,6 +41,7 @@ const Login = () => {
       })
       .catch((err) => {
         console.error(err);
+        setLogError(err.message);
       });
   };
 
@@ -46,6 +49,9 @@ const Login = () => {
     <div className="pt-[60px] pb-[76px] bg-gray-100 overflow-x-hidden">
       <div className="mx-auto w-5/12 min-w-fit ">
         <h2 className="text-3xl font-medium my-5 text-center">Login Here</h2>
+        {logError && (
+          <p className="text-red-600 text-center text-xl"> {logError} </p>
+        )}
         <form onSubmit={handleLogin} className="card-body">
           <div className="form-control">
             <label className="label">
