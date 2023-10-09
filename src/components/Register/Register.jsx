@@ -2,6 +2,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../providers/AuthProvider';
 import { useContext, useState } from 'react';
 import { updateProfile } from 'firebase/auth';
+import swal from 'sweetalert';
 
 const Register = () => {
   const { createUser } = useContext(AuthContext);
@@ -38,6 +39,12 @@ const Register = () => {
     createUser(email, password, name, photo)
       .then((result) => {
         console.log(result.user);
+        swal({
+          title: 'Registration Successfull!',
+          text: 'You Registered in Corporate Care.',
+          timer: 2000,
+          buttons: false,
+        });
         navigate('/');
         updateProfile(result.user, {
           displayName: name,
