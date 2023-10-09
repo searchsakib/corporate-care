@@ -1,11 +1,13 @@
 import { Link, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../providers/AuthProvider';
-import { useContext } from 'react';
+import { useContext, useState } from 'react';
 import { updateProfile } from 'firebase/auth';
 
 const Register = () => {
   const { createUser } = useContext(AuthContext);
   const navigate = useNavigate();
+
+  const [regError, setRegError] = useState('');
 
   const handleRegister = (e) => {
     e.preventDefault();
@@ -17,6 +19,7 @@ const Register = () => {
     const email = form.get('email');
     const password = form.get('password');
     // console.log(name, photo, email, password);
+    setRegError('');
 
     createUser(email, password, name, photo)
       .then((result) => {
@@ -36,6 +39,7 @@ const Register = () => {
       })
       .catch((error) => {
         console.error(error);
+        setRegError(error.message);
       });
   };
 
@@ -46,6 +50,9 @@ const Register = () => {
           <h2 className="text-3xl font-medium my-5 text-center">
             Register Here
           </h2>
+          {regError && (
+            <p className="text-red-600 text-center text-xl"> {regError} </p>
+          )}
           <form onSubmit={handleRegister} className="card-body">
             <div className="form-control">
               <label className="label">
