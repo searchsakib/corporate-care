@@ -9,6 +9,14 @@ const Services = () => {
       .then((data) => setMyService(data));
   }, []);
   // console.log(myService);
+  const eachAosAnimation = [
+    'fade-right',
+    'zoom-out-up',
+    'fade-left',
+    'fade-right',
+    'zoom-out-up',
+    'fade-left'
+  ]
 
   return (
     <div className="max-w-[1320px] mx-auto">
@@ -23,7 +31,7 @@ const Services = () => {
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3  gap-8 px-6 md:px-10 lg:px-0 ">
         {myService?.map((service, idx) => (
-          <ServiceCard key={idx} service={service}></ServiceCard>
+          <ServiceCard key={idx} service={service} aosAnimation={eachAosAnimation[idx]}></ServiceCard>
         ))}
       </div>
     </div>

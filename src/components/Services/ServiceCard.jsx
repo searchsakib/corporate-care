@@ -3,7 +3,7 @@ import 'aos/dist/aos.css';
 import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
-const ServiceCard = ({ service }) => {
+const ServiceCard = ({ service,aosAnimation }) => {
   const { id, image, title, short_desc, price } = service || {};
 
   useEffect(() => {
@@ -12,7 +12,7 @@ const ServiceCard = ({ service }) => {
   // I have to add this to div: data-aos="fade-up"
 
   return (
-    <div className="card bg-base-100 shadow-xl" data-aos="fade-up">
+    <div className="card bg-base-100 shadow-xl" data-aos={aosAnimation}>
       <figure>
         <img src={image} alt="pics" />
       </figure>
